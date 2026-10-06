@@ -1,5 +1,4 @@
 name: Publicar no GitHub Pages
-name: Publicar no GitHub Pages
 
 on:
   push:
@@ -38,4 +37,4 @@ jobs:
           path: caderneta/dist
       - id: deployment
         uses: actions/deploy-pages@v4
-        
+  
