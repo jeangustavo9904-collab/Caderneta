@@ -1,0 +1,28 @@
+{
+  "name": "caderneta",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Gestão financeira pessoal offline-first (PWA). Os dados ficam só no aparelho.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.0.0",
+    "@fontsource-variable/figtree": "^5.0.0",
+    "dexie": "^4.0.8",
+    "dexie-react-hooks": "^1.1.7",
+    "lucide-react": "^0.447.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.8"
+  }
+}

@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Cores do app (R G B). A paleta vem das cédulas do real:
+ * garoupa = azul-esverdeado da nota de R$ 100, mico = amarelo da nota de R$ 20.
+ */
+:root {
+  --papel: 242 244 247;
+  --folha: 255 255 255;
+  --tinta: 22 35 59;
+  --apagado: 94 107 130;
+  --linha: 221 226 233;
+  --cofre: 22 35 59;
+  --garoupa: 14 116 126;
+  --sobre-garoupa: 255 255 255;
+  --entrada: 23 122 77;
+  --saida: 190 52 44;
+  --mico: 176 122 8;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papel: 13 20 33;
+    --folha: 22 31 48;
+    --tinta: 232 237 245;
+    --apagado: 150 162 183;
+    --linha: 44 56 79;
+    --cofre: 30 45 73;
+    --garoupa: 86 194 203;
+    --sobre-garoupa: 8 24 30;
+    --entrada: 92 201 147;
+    --saida: 244 128 118;
+    --mico: 236 184 68;
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-papel font-sans text-tinta antialiased;
+    overscroll-behavior-y: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--garoupa));
+    outline-offset: 2px;
+  }
+
+  /* Campo de data com a mesma altura dos outros no iOS */
+  input[type='date'] {
+    min-height: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
